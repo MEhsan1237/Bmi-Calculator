@@ -13,7 +13,10 @@ class ButtonsScreen extends StatefulWidget {
 class _ButtonsScreenState extends State<ButtonsScreen> {
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
+    return OutlinedButton(
+      style: OutlinedButton.styleFrom(
+        foregroundColor: Colors.white
+      ),
 
 
         onPressed: widget.onPressed, child:  Text(widget.child));

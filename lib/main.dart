@@ -126,14 +126,15 @@ class _MyBmiState extends State<MyBmi> {
                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                    children: [
                      HoverAnimationScreen(
-                       child: ButtonsScreen(onPressed:
-                         calculate ,
-                       
-                       
+                       onPressed: calculate,
+                       child: ButtonsScreen(
+                       onPressed: calculate,
                        child: 'Calculate',),
                      ),
                      HoverAnimationScreen(
-                       child: ButtonsScreen(onPressed: reset,
+                       onPressed: reset,
+                       child: ButtonsScreen(
+                         onPressed: reset,
                          child: 'Reset',),
                      )
                    ],
