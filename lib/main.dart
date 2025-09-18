@@ -32,6 +32,7 @@ class _MyBmiState extends State<MyBmi> {
 
   double? bmi;
   String category = "";
+  String extraMessage = "";
 
   void reset() {
     setState(() {
@@ -61,15 +62,19 @@ class _MyBmiState extends State<MyBmi> {
         bmi = weightKg / (heightM * heightM);
       if (bmi! < 18.5) {
         category = "UnderWeight";
+        extraMessage = "⚠️ Eat more nutritious food!";
       }
       else if (bmi! < 24.5) {
         category = "Normal";
+        extraMessage = "✅ Keep up the good lifestyle!";
       }
       else if (bmi! < 29.9) {
         category = "Overweight";
+        extraMessage = "⚠️ Try regular exercise!";
       }
       else {
         category = "Obese";
+        extraMessage = "❌ Consult a doctor for advice!";
       }
     });
 
@@ -144,7 +149,7 @@ class _MyBmiState extends State<MyBmi> {
 
                     bmi == null
                         ? category.isEmpty ? "" : category
-                        : "Your BMI is ${bmi!.toStringAsFixed(2)}  Category: $category",
+                        : "Your BMI is ${bmi!.toStringAsFixed(2)}  Category: $category\n$extraMessage",
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 18,color:getCategoryColor()),
                   ),

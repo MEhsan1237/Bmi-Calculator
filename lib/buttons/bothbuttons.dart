@@ -15,6 +15,7 @@ class _ButtonsScreenState extends State<ButtonsScreen> {
   Widget build(BuildContext context) {
     return OutlinedButton(
       style: OutlinedButton.styleFrom(
+        side: BorderSide.none,
         foregroundColor: Colors.white
       ),
 

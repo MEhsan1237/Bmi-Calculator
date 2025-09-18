@@ -32,8 +32,8 @@ class _HoverAnimationScreenState extends State<HoverAnimationScreen> {
           duration: Duration(milliseconds: 200),
 
           decoration: BoxDecoration(
-            color: isHover ? Colors.red : Colors.blue,
-            borderRadius: BorderRadius.circular(15),
+            color: isHover ?   Colors.deepPurple: Colors.red[600],
+            borderRadius: BorderRadius.circular(18),
           ),
           transform:
               isHover ? Matrix4.translationValues(0, -8, 0) : Matrix4.identity(),
