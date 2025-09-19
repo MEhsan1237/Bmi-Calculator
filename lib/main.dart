@@ -61,6 +61,7 @@ class _MyBmiState extends State<MyBmi> {
     setState(() {
         bmi = weightKg / (heightM * heightM);
       if (bmi! < 18.5) {
+
         category = "UnderWeight";
         extraMessage = "⚠️ Eat more nutritious food!";
       }
@@ -95,6 +96,7 @@ class _MyBmiState extends State<MyBmi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
 
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -126,7 +128,7 @@ class _MyBmiState extends State<MyBmi> {
                   TextFormFieldScreen(title: 'Height (cm) : ', hintText: "Enter the Height", controller:  heightController,),
                   SizedBox(height: 16,),
                   TextFormFieldScreen(title: 'Weight (kg) : ', hintText: "Enter the Weight", controller: weightController,),
-                 SizedBox(height: 25,),
+                 SizedBox(height: 15,),
                  Row(
                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                    children: [
@@ -144,7 +146,7 @@ class _MyBmiState extends State<MyBmi> {
                      )
                    ],
                  ),
-                  SizedBox(height: 10,),
+                  SizedBox(height: 8,),
                   Text(
 
                     bmi == null
